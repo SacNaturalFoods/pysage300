@@ -59,8 +59,12 @@ class APVendor(Base):
     SHORTNAME = sa.Column(
         'SHORTNAME', sa.String(length=10), nullable=False)
 
+    short_name = stripped('SHORTNAME')
+
     VENDNAME = sa.Column(
         'VENDNAME', sa.String(length=60), nullable=False)
+
+    name = stripped('VENDNAME')
 
     TEXTSTRE1 = sa.Column(
         'TEXTSTRE1', sa.String(length=60), nullable=False)
@@ -116,6 +120,16 @@ class APVendor(Base):
         'TEXTPHON2', sa.String(length=30), nullable=False)
 
     phone2 = stripped('TEXTPHON2')
+
+    GLACCNT = sa.Column(
+        'GLACCNT', sa.String(length=45), nullable=False)
+
+    general_ledger_account = stripped('GLACCNT')
+
+    TERMSCODE = sa.Column(
+        'TERMSCODE', sa.String(length=6), nullable=False)
+
+    terms_code = stripped('TERMSCODE')
 
     EMAIL1 = sa.Column(
         'EMAIL1', sa.String(length=50), nullable=False)
