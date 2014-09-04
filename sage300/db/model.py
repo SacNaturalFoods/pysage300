@@ -102,6 +102,11 @@ class APVendor(Base):
 
     country = stripped('CODECTRY')
 
+    NAMECTAC = sa.Column(
+        'NAMECTAC', sa.String(length=60), nullable=False)
+
+    contact = stripped('NAMECTAC')
+
     TEXTPHON1 = sa.Column(
         'TEXTPHON1', sa.String(length=30), nullable=False)
 
@@ -111,3 +116,23 @@ class APVendor(Base):
         'TEXTPHON2', sa.String(length=30), nullable=False)
 
     phone2 = stripped('TEXTPHON2')
+
+    EMAIL1 = sa.Column(
+        'EMAIL1', sa.String(length=50), nullable=False)
+
+    email1 = stripped('EMAIL1')
+
+    EMAIL2 = sa.Column(
+        'EMAIL2', sa.String(length=50), nullable=False)
+
+    email2 = stripped('EMAIL2')
+
+    WEBSITE = sa.Column(
+        'WEBSITE', sa.String(length=100), nullable=False)
+
+    website = stripped('WEBSITE')
+
+    CTACPHONE = sa.Column(
+        'CTACPHONE', sa.String(length=30), nullable=False)
+
+    contact_phone = stripped('CTACPHONE')
