@@ -56,6 +56,8 @@ class APVendor(Base):
     VENDORID = sa.Column(
         'VENDORID', sa.String(length=12), primary_key=True, nullable=False)
 
+    id = stripped('VENDORID')
+
     SHORTNAME = sa.Column(
         'SHORTNAME', sa.String(length=10), nullable=False)
 
